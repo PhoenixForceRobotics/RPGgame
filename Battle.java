@@ -2,14 +2,16 @@ package RPGgame;
 
 import java.util.Scanner;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class Battle {
     private static Scanner input = new Scanner(System.in);
     private static Random randy = new Random();
     private static int playerHealth = 50;
     private static int enemyHealth = 50;
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.out.println("An Enemy has appeared!\n(ง｀Д´)ง");
+        TimeUnit.SECONDS.sleep(1);
         while ((playerHealth) > 0  && (enemyHealth > 0))
         {
             int playerAttack = PlayerAttack();
@@ -24,6 +26,7 @@ public class Battle {
             System.out.println("Player HP: " + playerHealth);
             System.out.println("Enemy HP: " + enemyHealth);
             System.out.println("(ง｀Д´)ง");
+            TimeUnit.SECONDS.sleep(1);
         }
 
         if (enemyHealth > 0) {
@@ -108,7 +111,7 @@ public class Battle {
         }
     }
 
-    private static void BattleActions(int player, int enemy) {
+    private static void BattleActions(int player, int enemy) throws InterruptedException {
         if (player == 1) {
             PlayerMelee(enemy);
         } else if (player == 2) {
@@ -121,7 +124,7 @@ public class Battle {
         
     }
 
-    private static void PlayerMelee(int enemy) {
+    private static void PlayerMelee(int enemy) throws InterruptedException {
         int enemyDmg = 0;
         int playerDmg = 0;
 
@@ -160,13 +163,16 @@ public class Battle {
 
             System.out.println("The Enemy lost " + enemyDmg + " HP!");
             System.out.println("(ง •̀_•́)ง ผ(o.Oผ)");
+
         }
+        TimeUnit.SECONDS.sleep(3);
         System.out.println("You lost " + playerDmg + " HP!");
         enemyHealth -= enemyDmg;
         playerHealth -= playerDmg;
+        TimeUnit.SECONDS.sleep(1);
     }
 
-    private static void PlayerRanged(int enemy) {
+    private static void PlayerRanged(int enemy) throws InterruptedException {
         int enemyDmg = 0;
         int playerDmg = 0;
 
@@ -202,12 +208,14 @@ public class Battle {
             System.out.println("The Enemy lost " + enemyDmg + " HP!");
             System.out.println("Σ>―(´･ω･`)→");
         }
+        TimeUnit.SECONDS.sleep(3);
         System.out.println("You lost " + playerDmg + " HP!");
         enemyHealth -= enemyDmg;
         playerHealth -= playerDmg;
+        TimeUnit.SECONDS.sleep(1);
     }
 
-    private static void PlayerCounter(int enemy) {
+    private static void PlayerCounter(int enemy) throws InterruptedException {
         int enemyDmg = 0;
         int playerDmg = 0;
 
@@ -244,12 +252,14 @@ public class Battle {
             System.out.println("The Enemy lost " + enemyDmg + " HP!");
             System.out.println("!!( ･_･)r鹵~<巛巛巛(ﾟoﾟ;");
         }
+        TimeUnit.SECONDS.sleep(3);
         System.out.println("You lost " + playerDmg + " HP!");
         enemyHealth -= enemyDmg;
         playerHealth -= playerDmg;
+        TimeUnit.SECONDS.sleep(1);
     }
 
-    private static void PlayerDefend(int enemy) {
+    private static void PlayerDefend(int enemy) throws InterruptedException {
         int enemyDmg = 0;
         int playerDmg = 0;
         if (enemy == 1) {
@@ -285,8 +295,10 @@ public class Battle {
             System.out.println("The Enemy lost " + enemyDmg + " HP!");
             System.out.println("┐(´д｀)┌");
         }
+        TimeUnit.SECONDS.sleep(3);
         System.out.println("You lost " + playerDmg + " HP!");
         enemyHealth -= enemyDmg;
         playerHealth -= playerDmg;
+        TimeUnit.SECONDS.sleep(1);
     }
 }
