@@ -4,11 +4,18 @@ import java.util.Scanner;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import java.awt.*;
+
 public class Battle {
     private static Scanner input = new Scanner(System.in);
     private static Random randy = new Random();
     private static int playerHealth = 50;
     private static int enemyHealth = 50;
+
+    private static double PANEL_SIZE = 2.5;
+    private static DrawingPanel panel = new DrawingPanel((int)(200 * PANEL_SIZE), (int)(200 * PANEL_SIZE));
+    private static Graphics g = panel.getGraphics();
+
     public static void main(String[] args) throws InterruptedException {
         System.out.println("An Enemy has appeared!\n(ง｀Д´)ง");
         TimeUnit.SECONDS.sleep(1);
