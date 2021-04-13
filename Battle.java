@@ -165,7 +165,7 @@ public class Battle {
             System.out.println("(ง •̀_•́)ง ผ(o.Oผ)");
 
         }
-        TimeUnit.SECONDS.sleep(3);
+        TimeUnit.SECONDS.sleep(2);
         System.out.println("You lost " + playerDmg + " HP!");
         enemyHealth -= enemyDmg;
         playerHealth -= playerDmg;
@@ -208,7 +208,7 @@ public class Battle {
             System.out.println("The Enemy lost " + enemyDmg + " HP!");
             System.out.println("Σ>―(´･ω･`)→");
         }
-        TimeUnit.SECONDS.sleep(3);
+        TimeUnit.SECONDS.sleep(2);
         System.out.println("You lost " + playerDmg + " HP!");
         enemyHealth -= enemyDmg;
         playerHealth -= playerDmg;
@@ -252,7 +252,7 @@ public class Battle {
             System.out.println("The Enemy lost " + enemyDmg + " HP!");
             System.out.println("!!( ･_･)r鹵~<巛巛巛(ﾟoﾟ;");
         }
-        TimeUnit.SECONDS.sleep(3);
+        TimeUnit.SECONDS.sleep(2);
         System.out.println("You lost " + playerDmg + " HP!");
         enemyHealth -= enemyDmg;
         playerHealth -= playerDmg;
@@ -295,7 +295,7 @@ public class Battle {
             System.out.println("The Enemy lost " + enemyDmg + " HP!");
             System.out.println("┐(´д｀)┌");
         }
-        TimeUnit.SECONDS.sleep(3);
+        TimeUnit.SECONDS.sleep(2);
         System.out.println("You lost " + playerDmg + " HP!");
         enemyHealth -= enemyDmg;
         playerHealth -= playerDmg;
